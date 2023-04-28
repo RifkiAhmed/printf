@@ -44,3 +44,35 @@ int print_percent(va_list args)
 	(void)args;
 	return (_putchar('%'));
 }
+
+/**
+ * print_int - prints integer
+ * @ap: pointer
+ *
+ * Return: char printed
+ */
+int print_int(va_list ap)
+{
+	long l;
+	int sum = 0;
+	char *arr = "0123456789";
+	char buffer[50];
+	char *ptr;
+	unsigned long n;
+
+	n = l = (int)va_arg(ap, int);
+	if (l < 0)
+	{
+		n = -l;
+	}
+	ptr = &buffer[50];
+	*ptr = '\0';
+	do {
+		*--ptr = arr[n % 10];
+		n /= 10;
+	} while (n != 0);
+	if (l < 0)
+		sum += _putchar('-');
+	sum += _puts(ptr);
+	return (sum);
+}
