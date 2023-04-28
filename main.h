@@ -32,6 +32,9 @@ int print_int(va_list args);
 int (*get_specifier(char *s))();
 int get_print_func(char *s, va_list args);
 
+/* 4-specifier.c*/
+int print_from_to(char *from, char *to);
+
 /* 0-printf.c file*/
 int _printf(const char *format, ...);
 
