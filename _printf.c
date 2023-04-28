@@ -9,7 +9,7 @@
 int _printf(const char *format, ...)
 {
 	int total = 0;
-	char *ptr, *from;
+	char *ptr;
 	va_list args;
 
 	va_start(args, format);
@@ -25,7 +25,6 @@ int _printf(const char *format, ...)
 			total += _putchar(*ptr);
 			continue;
 		}
-		from = ptr;
 		ptr++;
 		if (!get_specifier(ptr))
 			total += _putchar(*ptr);
