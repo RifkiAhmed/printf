@@ -28,7 +28,7 @@ int _printf(const char *format, ...)
 		from = ptr;
 		ptr++;
 		if (!get_specifier(ptr))
-			total += print_from_to(from, ptr);
+			total += _putchar(*ptr);
 		else
 			total += get_print_func(ptr, args);
 	}
