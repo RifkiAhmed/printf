@@ -120,9 +120,11 @@ int print_address(va_list args)
 	char *arr = "0123456789abcdef";
 	char buffer[50];
 	char *ptr;
-	unsigned long n;
+	unsigned long n = 0;
 
 	n = (unsigned long int)va_arg(args, unsigned long int);
+	if (!n)
+		return (_puts("(nil)"));
 	ptr = &buffer[50];
 	*ptr = '\0';
 
