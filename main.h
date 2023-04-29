@@ -27,6 +27,7 @@ int print_char(va_list args);
 int print_string(va_list args);
 int print_percent(va_list args);
 int print_int(va_list args);
+int print_binary(va_list args);
 
 /* 2-specifier.c file*/
 int (*get_specifier(char *s))();
