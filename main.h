@@ -36,6 +36,7 @@ int print_unsigned(va_list args);
 int print_octal(va_list args);
 int print_hex(va_list args);
 int print_HEX(va_list args);
+int print_address(va_list args);
 
 /* 2-specifier.c file*/
 int (*get_specifier(char *s))();

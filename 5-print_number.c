@@ -104,3 +104,34 @@ int print_HEX(va_list args)
 	sum += _puts(ptr);
 	return (sum);
 }
+
+
+#include "main.h"
+
+/**
+ * print_address - prints address of pointer
+ * @args: pointer
+ *
+ * Return: char printed
+ */
+int print_address(va_list args)
+{
+	int sum = 0;
+	char *arr = "0123456789abcdef";
+	char buffer[50];
+	char *ptr;
+	unsigned long n;
+
+	n = (unsigned long int)va_arg(args, unsigned long int);
+	ptr = &buffer[50];
+	*ptr = '\0';
+
+	do {
+		*--ptr = arr[n % 16];
+		n /= 16;
+	} while (n != 0);
+	*--ptr = 'x';
+	*--ptr = '0';
+	sum += _puts(ptr);
+	return (sum);
+}

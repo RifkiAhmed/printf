@@ -19,6 +19,7 @@ int (*get_specifier(char *s))()
 		{"o", print_octal},
 		{"x", print_hex},
 		{"X", print_HEX},
+		{"p", print_address},
 		{NULL, NULL}};
 	int i = 0;
 
