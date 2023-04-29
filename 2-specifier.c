@@ -14,6 +14,7 @@ int (*get_specifier(char *s))()
 		{"%", print_percent},
 		{"d", print_int},
 		{"i", print_int},
+		{"b", print_binary},
 		{NULL, NULL}};
 	int i = 0;
 
