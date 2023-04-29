@@ -76,3 +76,25 @@ int print_int(va_list ap)
 	sum += _puts(ptr);
 	return (sum);
 }
+
+/**
+ * print_binary - prints integer in binary format
+ * @args: pointer
+ *
+ * Return: number of characters printed
+ */
+int print_binary(va_list args)
+{
+        unsigned int n = va_arg(args, unsigned int);
+        int sum = 0;
+        char buffer[50];
+        char *ptr = &buffer[50];
+
+        *ptr = '\0';
+        do {
+                *--ptr = (n % 2 == 0) ? '0' : '1';
+                n /= 2;
+        } while (n != 0);
+        sum += _puts(ptr);
+        return (sum);
+}
