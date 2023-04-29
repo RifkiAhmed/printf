@@ -29,6 +29,12 @@ int print_percent(va_list args);
 int print_int(va_list args);
 int print_binary(va_list args);
 
+/* 5-print_number.c */
+int print_unsigned(va_list args);
+int print_octal(va_list args);
+int print_hex(va_list args);
+int print_HEX(va_list args);
+
 /* 2-specifier.c file*/
 int (*get_specifier(char *s))();
 int get_print_func(char *s, va_list args);
