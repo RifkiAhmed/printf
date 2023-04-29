@@ -6,6 +6,8 @@
 #include <limits.h>
 #include <stdlib.h>
 
+#define BUFFER_1024
+
 extern int make_iso_compilers_happy;
 /**
  * struct specifier - specifier type
